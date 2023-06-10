@@ -1,0 +1,445 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Serif TC', serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+body{
+    cursor: url(./coures.png),auto;
+}
+header{
+    height: 8vh;
+    width: 100vw;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+.container{
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+.logo{
+    width: 10vw;
+    height: 10vh;
+    background-repeat: no-repeat;
+}
+/* nav{
+    display: flex;
+    position: sticky;
+    line-height: 5vw;
+    float: right;
+    text-align: center;
+    font-size: 20px;
+    width: 20%;
+    height: 5vh;
+    justify-content: space-between;
+} */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+    width: 45%;
+    line-height: 1;
+    font-size: 24px;
+}
+.nav-list{
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+.nav-item{
+    min-width: 7.5rem;
+    text-align: center;
+    padding-block: 1rem;
+}
+.nav-link{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.active{
+    position: absolute;
+    bottom: 0rem;
+    margin-left: 38px;
+    height: 2px;
+    width: 3.5rem;
+    background-color: #fff;
+    transition: transform 0.25s;
+}
+.nav-item:nth-child(2):hover ~ .active{
+    transform: translateX(8.8rem);
+}
+.nav-item:nth-child(3):hover ~ .active{
+    transform: translateX(17.8rem);
+}
+.nav-item:nth-child(4):hover ~ .active{
+    transform: translateX(26.3rem);
+}
+.nav-item:nth-child(5):hover ~ .active{
+    transform: translateX(34.8rem);
+}
+a:link{
+    color: #fff;
+}
+a:visited{
+    color: gray;
+}
+.intro{
+    background-color: black;
+    height: 90%;
+}
+.photo{
+    position: relative;
+    background-color:silver;
+    width: 100%;
+    /* margin: 0 100px 0 100px; */
+    /* perspective: 2000px; */
+    text-align: center;
+}
+.carousel{
+    position: absolute;
+    width: 450px;
+    height: 90%;
+    transform-style: preserve-3d;
+    animation: rotate360 60s infinite forwards linear;
+    margin-left: 35%;
+}
+.image{
+    position: absolute;
+    width: 400px;
+    height: 90%;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    background-size: cover;
+    box-shadow:  inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+}
+.text0{
+    font-weight: bold;
+    font-size: clamp(26px, 5vw ,52px);
+    text-transform: uppercase;
+}
+.text{
+    width: 100%;
+    color: #fff;
+    font-size: clamp(26px, 5vw ,52px);
+    border: 2px solid black;
+    text-transform: uppercase;
+}
+.text2{
+    color: #fff;
+    font-size: clamp(26px, 5vw ,52px);
+    text-transform: uppercase;
+}
+@keyframes rotate360{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+.image:nth-child(1){
+    background-image: url("https://picsum.photos/400/600?random=1");
+    transform: rotateY(0deg) translateZ(600px);
+}
+.image:nth-child(2){
+    background-image: url("https://picsum.photos/400/600?random=2");
+    transform: rotateY( 40deg) translateZ(600px);
+}
+.image:nth-child(3){
+    background-image: url("https://picsum.photos/400/600?random=3");
+    transform: rotateY( 80deg) translateZ(600px);
+}
+.image:nth-child(4){
+    background-image: url("https://picsum.photos/400/600?random=4");
+    transform: rotateY( 120deg) translateZ(600px);
+}
+.image:nth-child(5){
+    background-image: url("https://picsum.photos/400/600?random=5");
+    transform: rotateY( 160deg) translateZ(600px);
+}
+.image:nth-child(6){
+    background-image: url("https://picsum.photos/400/600?random=6");
+    transform: rotateY( 200deg) translateZ(600px);
+}
+.image:nth-child(7){
+    background-image: url("https://picsum.photos/400/600?random=7");
+    transform: rotateY( 240deg) translateZ(600px);
+}
+.image:nth-child(8){
+    background-image: url("https://picsum.photos/400/600?random=8");
+    transform: rotateY( 280deg) translateZ(600px);
+}
+.image:nth-child(9){
+    background-image: url("https://picsum.photos/400/600?random=9");
+    transform: rotateY( 320deg) translateZ(600px);
+}
+
+.video{
+    background-color:dimgray;
+    height: 90%;
+    text-align: center;
+}
+input{
+    display: block;
+    height: auto;
+}
+/* .about{
+    background-color: white;
+    height: 100%;
+} */
+.footer{
+    font-family: serif;
+    background-color: black;
+    height: 20%;
+    font-size: 20px;
+    color: silver;
+    text-align: center;
+    /* line-height: 150px; */
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 48px;
+    background-color: #ffffff ;
+} 
+.about{
+    height: 100%;
+    width: 90%;
+    margin-inline: auto;
+    padding: 60px 10px;
+}
+.title{
+    margin: 0 auto;
+    height: 10vh;
+}
+.title span{
+    display: block;
+}
+.title .primary{
+    font-size: clamp(26px, 8vw ,52px);
+    text-transform: uppercase;
+    color: #27b6c0;
+    text-align: center;
+}
+.title .secondary{
+    font-size: clamp(14px, 2.5vw ,52px);
+    font-weight: 400;
+    color: #d6d6e0;
+}
+.gallery-wrapper{
+    display: flex;
+    height: 500px;
+}
+.gallery-item{
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex: 1;
+    height: 500px;
+    width: 30%;
+    background-color:#000;
+    opacity: 1;
+    overflow: hidden;
+    transition: flex 0.5s, opacity 0.25s;
+}   
+.gallery-item:hover{
+    opacity: 1;
+    flex: 5;
+}
+.gallery-item:not(:hover){
+    opacity: 0.75;
+}
+.item-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item-description{
+    align-self: flex-end;
+    text-transform: uppercase;
+    color: #fff;
+}
+.name{
+    font-size: 37px;
+    background: linear-gradient(90deg,#f32d5b,#ff009b);
+    height: 10%;
+    position: absolute;
+    bottom: 50px;
+}
+.role{
+    font-size: 25px;
+    display: inline-block;
+    background: linear-gradient(90deg,#4136d9,#0086c7);
+    padding: 10px;
+    box-shadow: 0 1px 10px rgb(0,0,0,0.2); 
+    height: 10%;
+    position: absolute;
+    bottom: 0px;
+}
+.name,.role{
+    opacity: 0;
+    transition: opacity 0.25s,
+    transform 0.3s;
+    transition-delay: .35s;
+}
+.gallery-item:hover .name,
+.gallery-item:hover .role{
+    opacity: 1;
+    transform: translateY(0);
+}
+.gallery-item:not(:hover) .name,
+.gallery-item:not(:hover) .role{
+    transition-delay: 0s;
+}
+@media screen and (max-width: 768px){
+    .gallery-wrapper{
+    flex-direction: column;
+    height : 100vh;
+    }
+·gallery-item:hover{  
+    flex-basis: 100%;
+    }
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
+.card_image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.15;
+    transition: opacity 0.25s, scale 0.35s;
+}
+.card:hover .card_image{
+    opacity: 0.5;
+    scale: 1;
+}
+.card_body{
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    justify-content: center;
+}
+.card_body::before{
+    content:'';
+    position: absolute;
+    inset: 20px;
+    border: 2px solid #fff;
+    opacity: 0;
+    scale: 1.25;
+    transition: opacity 0.25s, scale 0.25s;
+}
+.card:hover .card_body::before{
+    opacity: 1;
+    scale: 1;
+}
+.card_title{
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 10px
+      rgba(0,0,0,0.5);
+}
+.card_name{
+    font-size: 48px;
+    color: #fff;
+    opacity: 0;
+    translate: -25px;
+    transition: opacity 0.25s,
+      translate 0.25s;
+}
+.card_description{
+    font-size: 36px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Serif TC', serif;
+    opacity: 0;
+    translate: -25px;
+    transition: opacity 0.25s,
+      translate 0.5s;
+}
+.card:hover .card_description {
+    opacity: 1;
+    translate: 0;
+}
+.card:hover .card_name {
+    opacity: 1;
+    translate: 0;
+}
+.work{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+.art{
+    margin: 0;
+    position: relative;
+    width: 15%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    transition: width 1s, opacity 2s, bottom 2s;
+}
+.art:nth-child(1){
+    background-image: url(./school.jpg);
+}
+.art:nth-child(2){
+    background-image: url(./face.jpg);
+}
+.art:nth-child(3){
+    background-image: url(./1.JPG);
+}
+.art:nth-child(4){
+    background-image: url(./2.jpg);
+}
+.art:nth-child(5){
+    background-image: url(https://picsum.photos/200/300?random=5);
+}
+.art:hover{
+    cursor: pointer;
+    opacity: 1;
+    width: 30%;
+    bottom: 3%;
+}
+.workhouse{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000000;
+}
+a{
+    text-decoration: none;
+}
